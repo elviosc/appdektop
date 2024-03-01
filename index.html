@@ -11,8 +11,13 @@
     Fore more details:
     * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
   -->
-  <base href="https://apps-flutter.wgprvr.easypanel.host/">
-
+  <base id="base-tag" href="">
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var baseTag = document.getElementById("base-tag");
+        baseTag.setAttribute("href", window.location.pathname);
+    });
+</script>
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
 
